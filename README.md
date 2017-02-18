@@ -1,7 +1,7 @@
 # moroccan-competitive-programmers
-This repo contains visual demos of several algorithms. The aim is to help users grasp the problem/algorithm but visualizing the output. This repo is a work in progress and it will grow to contain other algorithms.
+This repo contains visual demos of several algorithms. The aim is to help users grasp the problem/algorithm by visualizing the output. This repo is a work in progress and it will grow to contain other algorithm visualizations.
 
-The following is a list of algorithms for which visualizations exist:
+The following is a list of algorithms for which visualizations have been implemented:
 
 ## Largest White Square in Grid
 
