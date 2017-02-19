@@ -11,6 +11,6 @@ The problem asks to find the largest (in terms of area) white square in a grid w
 
 ## Single Source Shortest Paths (Non-negative Edge Weights)
 
-Given a source node in a weighted graph (could be directed or undirected), find the shortest path from that node to every other node. In the demo nodes are points in the plane and the weights are the Euclidean distances between the points.
+Given a source node in a weighted graph (could be directed or undirected), find the shortest path from that node to every other node. In the demo nodes are points in the plane and the weights are the Euclidean distances between the points. The shortest paths are animated.
 
 ![Dijkstra](./Images/Dijkstra.png "Dijkstra")
