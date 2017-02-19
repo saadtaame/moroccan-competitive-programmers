@@ -8,3 +8,9 @@ The following is a list of algorithms for which visualizations have been impleme
 The problem asks to find the largest (in terms of area) white square in a grid where cells can be either white or black. Here is an exapmle where the optimal squares are highlighted in light blue.
 
 ![Largest white square in grid](./Images/LargestSquare.png "Largest white square in grid")
+
+## Single Source Shortest Paths (non-negative edge weights)
+
+Given a source node in a weighted graph, find the shortest path from that node to every other node.
+
+![Dijkstra](./Images/Dijkstra.png "Dijkstra")

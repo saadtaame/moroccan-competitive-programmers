@@ -50,7 +50,7 @@ var draw = function() {
       }
     }
   }
-}
+};
 
 var drawSolutions = function() {
   var canvas = document.getElementById("canvas");
@@ -69,7 +69,7 @@ var drawSolutions = function() {
       }
     }
   }
-}
+};
 
 draw();
 drawSolutions();
