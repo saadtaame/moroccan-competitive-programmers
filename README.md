@@ -9,8 +9,8 @@ The problem asks to find the largest (in terms of area) white square in a grid w
 
 ![Largest white square in grid](./Images/LargestSquare.png "Largest white square in grid")
 
-## Single Source Shortest Paths (non-negative edge weights)
+## Single Source Shortest Paths (Non-negative Edge Weights)
 
-Given a source node in a weighted graph, find the shortest path from that node to every other node. In the demo nodes are points in the plane and the weights are the Euclidean distances between the points.
+Given a source node in a weighted graph (could be directed or undirected), find the shortest path from that node to every other node. In the demo nodes are points in the plane and the weights are the Euclidean distances between the points.
 
 ![Dijkstra](./Images/Dijkstra.png "Dijkstra")
