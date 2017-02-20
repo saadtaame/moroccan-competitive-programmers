@@ -1,6 +1,11 @@
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
+var x    = [],
+    y    = [],
+    edge = [];
+var n =8 ; 
+
 
 var drawNode = function(x, y, radius, style) {
   ctx.fillStyle = style;
@@ -21,9 +26,9 @@ var drawEdge = function(Ax, Ay, Bx, By, style, t) {
 };
 
 /* Begin graph generator */
-var x    = [],
-    y    = [],
-    edge = [];
+
+var generateGraph = function (){
+
 
 var n = 8;
 
@@ -43,11 +48,10 @@ for(var i = 0; i < n; i++) {
   }
 }
 
-for(var i = 0; i < n; i++) {
-  x.push(Math.floor(20 + Math.random() * (canvas.width - 40)));
-  y.push(Math.floor(20 + Math.random() * (canvas.height - 40)));
-};
-/* End graph generator */
+
+
+} ; 
+
 
 var drawGraph = function() {
   for(var i = 0; i < n; i++) {
@@ -66,6 +70,21 @@ var getDist = function(i, j) {
 
   return Math.sqrt(dx * dx + dy * dy);
 };
+
+/* update the graph according to the user input */
+var getXY = function(canvas, event) {
+     var rect = canvas.getBoundingClientRect();
+    var X = event.clientX - rect.left;
+    var Y = event.clientY - rect.top;
+if( x.length < n ) 
+{
+	x.push(Math.floor(X)) ; 
+	y.push(Math.floor(Y)) ;
+drawGraph();
+}
+else 
+	alert("you attended 8 vertices on the graphe please run Dijkstra and reload the page ") ; 
+}
 
 var Dijkstra = function(source) {
   var dist   = [],
@@ -142,7 +161,26 @@ var Dijkstra = function(source) {
   playAnimation();
 };
 
+
+var doIt = function () {
 var source = Math.floor(Math.random() * (n - 1));
-drawGraph();
 drawNode(x[source], y[source], 10, 'rgb(200, 100, 10)');
 Dijkstra(source);
+}
+
+generateGraph(); 
+drawGraph();
+canvas.addEventListener("click",function(event){
+getXY(canvas,event);
+}) ; 
+
+var btn = document.getElementById("btn") ; 
+btn.addEventListener("click", function (event){
+doIt() ; 
+}
+) ; 
+
+
+
+
+
