@@ -112,8 +112,8 @@ var Dijkstra = function(source) {
       if(dist[Q[i]] < dist[current])
         current = Q[i];
     }
-    if(parent[current] != -1) {
 
+    if(parent[current] != -1) {
       start = null;
       var duration = 200;
       
