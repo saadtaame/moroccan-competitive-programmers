@@ -39,7 +39,7 @@ var drawGrid = function() {
 var dr = [0, 0, 1, -1],
     dc = [1, -1, 0, 0];
 
-var BFS = function() {
+var DFS = function() {
   var srcR = Math.floor(Math.random() * (N - 1)),
       srcC = Math.floor(Math.random() * (M - 1));
 
@@ -60,22 +60,42 @@ var BFS = function() {
   
   var step = function() {
     var len = Q.length;
-    for(var i = 0; i < len; i++) {
-      var r = Math.floor(Q[i] / M),
-          c = Q[i] % M;
+    var r = Math.floor(Q[len - 1] / M),
+        c = Q[len - 1] % M;
 
-      for(var j = 0; j < 4; j++) {
-        var newR = r + dr[j],
-            newC = c + dc[j];
+    /* Picked from the internet */
+    var shuffle = function(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
 
-        if((newR >= 0) && (newR < N) && (newC >= 0) && (newC < M) && (seen[newR][newC] == 0)) {
-          seen[newR][newC] = 1;
-          parent[newR][newC] = Q[i];
-          Q.push(newR * M + newC);
-        }
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    };
+
+    var pos = shuffle([0, 1, 2, 3]);
+
+    for(var i = 0; i < 4; i++) {
+      var newR = r + dr[pos[i]],
+          newC = c + dc[pos[i]];
+
+      if((newR >= 0) && (newR < N) && (newC >= 0) && (newC < M) && (seen[newR][newC] == 0)) {
+        seen[newR][newC] = 1;
+        parent[newR][newC] = Q[len - 1];
+        Q.push(newR * M + newC);
       }
     }
-    Q.splice(0, len);
+    Q.splice(len - 1, 1);
   };
 
   var playAnimation = function() {
@@ -84,15 +104,14 @@ var BFS = function() {
     }
 
     start = null;
-    var duration = 200;
+    var duration = 20;
     
     var drawStep = function(t) {
       if(!start) start = t;
       var elapsed = t - start;
       var len = Q.length;
-      for(var i = 0; i < len; i++) {
-        var r = Math.floor(Q[i] / M),
-            c = Q[i] % M;
+        var r = Math.floor(Q[len - 1] / M),
+            c = Q[len - 1] % M;
 
         if(parent[r][c] != -1) {
           var pR = Math.floor(parent[r][c] / M),
@@ -100,17 +119,14 @@ var BFS = function() {
 
           drawEdge(pC * WIDTH + WIDTH / 2, pR * HEIGHT + HEIGHT / 2, c * WIDTH + WIDTH / 2, r * HEIGHT + HEIGHT / 2, 'rgb(0, 0, 255)', Math.min(1.0, elapsed / duration));
         }
-      }
       if(elapsed < duration) {
         window.requestAnimationFrame(drawStep);
       }
       else {
         var len = Q.length;
-        for(var i = 0; i < len; i++) {
-          var r = Math.floor(Q[i] / M),
-              c = Q[i] % M;
+          var r = Math.floor(Q[len - 1] / M),
+              c = Q[len - 1] % M;
           drawNode(c * WIDTH + WIDTH / 2, r * HEIGHT + HEIGHT / 2, 2, 'rgb(0, 0, 255)');
-        }
         step();
         playAnimation();
       }
@@ -123,4 +139,4 @@ var BFS = function() {
 };
 
 drawGrid();
-BFS();
+DFS();

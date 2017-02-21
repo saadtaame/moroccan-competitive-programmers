@@ -21,3 +21,9 @@ Animated demo of breadth first search. A source node is  picked at random and th
 
 ![BFS](./Images/BFS.png "BFS")
 
+## Depth First Search
+
+Animated demo of depth first search. A source node is  picked at random and the DFS expansion from that source node is animated. The underlying graph is a grid.
+
+![DFS](./Images/DFS.png "DFS")
+
