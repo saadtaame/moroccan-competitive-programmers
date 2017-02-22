@@ -204,3 +204,4 @@ btn.addEventListener("click", function(event) {
         alert("Please complete the 8 vertices before running the algorithm");
     }
 });
+

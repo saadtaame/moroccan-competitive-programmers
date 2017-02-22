@@ -14,3 +14,16 @@ The problem asks to find the largest (in terms of area) white square in a grid w
 Given a source node in a weighted graph (could be directed or undirected), find the shortest path from that node to every other node. In the demo nodes are points in the plane and the weights are the Euclidean distances between the points. The shortest paths are animated.
 
 ![Dijkstra](./Images/Dijkstra.png "Dijkstra")
+
+## Breadth First Search
+
+Animated demo of breadth first search. A source node is  picked at random and the BFS expansion from that source node is animated. The underlying graph is a grid.
+
+![BFS](./Images/BFS.png "BFS")
+
+## Depth First Search
+
+Animated demo of depth first search. A source node is  picked at random and the DFS expansion from that source node is animated. The underlying graph is a grid.
+
+![DFS](./Images/DFS.png "DFS")
+
