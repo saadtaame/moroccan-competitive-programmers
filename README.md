@@ -15,13 +15,13 @@ Given a source node in a weighted graph (could be directed or undirected), find 
 
 ![Dijkstra](./Images/Dijkstra.png "Dijkstra")
 
-## Breadth First Search
+## [Breadth First Search](https://saadtaame.github.io/moroccan-competitive-programmers/BFS/BFS.html)
 
 Animated demo of breadth first search. A source node is  picked at random and the BFS expansion from that source node is animated. The underlying graph is a grid.
 
 ![BFS](./Images/BFS.png "BFS")
 
-## Depth First Search
+## [Depth First Search](https://saadtaame.github.io/moroccan-competitive-programmers/DFS/DFS.html)
 
 Animated demo of depth first search. A source node is  picked at random and the DFS expansion from that source node is animated. The underlying graph is a grid.
 
