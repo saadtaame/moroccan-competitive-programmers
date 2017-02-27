@@ -27,3 +27,9 @@ Animated demo of depth first search. A source node is  picked at random and the 
 
 ![DFS](./Images/DFS.png "DFS")
 
+## [Exact Set Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/Exact Set Cover/DLX.html)
+
+How many ways are there to tile a chessboard (excluding the middle 2x2 square) with pentominoes (see image below) where each pentomino must be used exactly ones ? This question and several related questions can be reduced to Exact Set Cover. Given a collection of sets whose elements are chosen from a universe `U`, can is there a sub-collection that partitions `U` ? These two problems may seem unrelated but there is a reduction from pentomino tiling. Examples of other problems that can be reduced to Exact Set Cover include Sudoku and N-queens. This demo is an implementation of Knuth's Algorithm X applied to pentomino tiling.
+
+![Pentominoes](./Images/Pentominoes.png "Pentominoes") ![DLX](./Images/DLX.png "DLX")
+
