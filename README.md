@@ -33,3 +33,9 @@ How many ways are there to tile a chessboard (excluding the middle 2x2 square) w
 
 ![Pentominoes](./Images/Pentominoes.png "Pentominoes") ![DLX](./Images/DLX.png "DLX")
 
+## [Generalized Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/N Queens/NQueens.html)
+
+This is another example of a problem that can be reduced to Set Cover. The problem is called N Queens and the goal is to count the number of ways to put N queens on a chessboard so that no two attack each other.
+
+![NQueens](./Images/NQueens.png "NQueens")
+
