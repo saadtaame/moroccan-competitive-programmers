@@ -215,8 +215,8 @@ var buildMatrix = function(n) {
 var boardSize = 7;
 
 var queen = document.getElementById("queen");
-$(document).ready(function() {
+queen.onload = function() {
   console.log("document loaded");
   var a = buildMatrix(boardSize);
   DLX( linkage(a, 2 * boardSize), [], 0 );
-});
+};
