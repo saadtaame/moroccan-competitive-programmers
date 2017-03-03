@@ -215,8 +215,8 @@ var buildMatrix = function(n) {
 var boardSize = 7;
 
 var queen = document.getElementById("queen");
-queen.src += "?" + escape(new Date().getTime()); // Trick to force image to load
-queen.onload = function() {
+$(document).ready(function() {
+  console.log("document loaded");
   var a = buildMatrix(boardSize);
   DLX( linkage(a, 2 * boardSize), [], 0 );
-};
+});
