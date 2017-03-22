@@ -3,7 +3,7 @@ This repo contains visual demos of several algorithms. The aim is to help users 
 
 The following is a list of algorithms for which visualizations have been implemented:
 
-## [Largest White Square in Grid](https://saadtaame.github.io/moroccan-competitive-programmers/Largest Square in Grid/LargestSquare.html)
+## [Largest White Square in Grid](https://saadtaame.github.io/moroccan-competitive-programmers/LargestSquareinGrid/LargestSquare.html)
 
 The problem asks to find the largest (in terms of area) white square in a grid where cells can be either white or black. Here is an exapmle where the optimal squares are highlighted in light blue.
 
@@ -27,13 +27,13 @@ Animated demo of depth first search. A source node is  picked at random and the 
 
 ![DFS](./Images/DFS.png "DFS")
 
-## [Exact Set Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/Exact Set Cover/DLX.html)
+## [Exact Set Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/ExactSetCover/DLX.html)
 
 How many ways are there to tile a chessboard (excluding the middle 2x2 square) with pentominoes (see image below) where each pentomino must be used exactly once ? This question and several related questions can be reduced to Exact Set Cover. Given a collection of sets whose elements are chosen from a universe `U`, is there a sub-collection that partitions `U` ? These two problems may seem unrelated but there is a reduction from pentomino tiling to Exact Set Cover. Examples of other problems that can be reduced to Exact Set Cover include Sudoku and N-queens. This demo is an implementation of Knuth's `Algorithm X` applied to pentomino tiling.
 
 ![Pentominoes](./Images/Pentominoes.png "Pentominoes") ![DLX](./Images/DLX.png "DLX")
 
-## [Generalized Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/N Queens/NQueens.html)
+## [Generalized Cover with Knuth's Dancing Links](https://saadtaame.github.io/moroccan-competitive-programmers/NQueens/NQueens.html)
 
 This is another example of a problem that can be reduced to Set Cover. The problem is called N Queens and the goal is to count the number of ways to put N queens on a chessboard so that no two attack each other.
 
