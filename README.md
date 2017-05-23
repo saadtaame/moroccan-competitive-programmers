@@ -37,5 +37,11 @@ How many ways are there to tile a chessboard (excluding the middle 2x2 square) w
 
 This is another example of a problem that can be reduced to Set Cover. The problem is called N Queens and the goal is to count the number of ways to put N queens on a chessboard so that no two attack each other.
 
-![NQueens](./Images/NQueens.png "NQueens")
+![Fenwick](./Images/NQueens.png "Fenwick")
+
+## [Prefix Queries in Fenwick Tree](https://saadtaame.github.io/moroccan-competitive-programmers/FenwickTree/Fenwick.html)
+
+Fenwick trees handle prefix operations on arrays efficiently. This demo illustrates two main ideas: range responsibility of each position in the tree and how a prefix query is answered by finding the ranges that partition the prefix. This demo is interactive.
+
+![Fenwick](./Images/Fenwick.png "Fenwick")
 
